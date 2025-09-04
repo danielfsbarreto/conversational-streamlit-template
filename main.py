@@ -1,7 +1,10 @@
 import streamlit as st
+from dotenv import load_dotenv
 
 from models import Conversation, Message
 from services import MessageSubmissionService
+
+load_dotenv()
 
 st.session_state.setdefault("conversation", Conversation())
 
